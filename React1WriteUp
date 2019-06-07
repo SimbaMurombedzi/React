@@ -1,0 +1,30 @@
+HTML
+<div id="app"></div>
+CSS
+.person{
+  padding: 20px;
+  display: inline-block;
+  margin: 10px;
+  border: 1px solid #eee;
+  width: 200px;
+  box-shadow: 0 2px 2px #ccc;
+}
+JavaScript
+function Person(props)
+{
+  return(
+      <div className="person">
+        <h1>{props.name}</h1>
+        <p>Age: {props.age}</p>
+        <p>Height: {props.height}</p>
+      </div>
+    );
+}
+var app =(
+  <div>
+    <Person name="Simba" age="37" height="1.86m" />
+    <Person name="Anna" age="34" height="1.5m" />
+    <Person name="Manu" age="40" height="1.6m" />
+  </div>
+);
+ReactDOM.render(app, document.querySelector('#app'));
